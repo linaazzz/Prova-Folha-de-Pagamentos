@@ -1,0 +1,32 @@
+### testar a raiz do projeto
+GET http://localhost:5110
+
+### cadastrar funcionários
+POST api/funcionario/cadastrar
+Content-Type: application/json
+
+{
+    "nome": Lina,
+    "cpf" : 123456
+}
+
+### listar funcionários
+GET	api/funcionario/listar
+
+###cadastrar folha de pagamento
+POST	api/folha/cadastrar
+Content-Type: application/json
+
+{
+    "valor": 50,
+    "quantidade" : 1000,
+    "mes" : 10,
+    "ano" : 2023,
+    "funcionarioId" : 1
+}
+
+### listar as folhas de pagamento
+GET	api/folha/listar
+
+### buscar folha de pagamento
+GET	api/folha/buscar/{cpf}/{mes}/{ano}
